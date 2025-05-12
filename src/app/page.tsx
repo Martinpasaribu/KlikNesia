@@ -49,7 +49,7 @@ export default function Home() {
                     height={400}
                 />
 
-                <div className="absolute flex flex-col md:gap-4 top-0 left-0 w-full max-w-[10rem] sm:max-w-[13rem]  md:max-w-[15rem] lg:max-w-[21rem] bg-white p-2 md:p-6 rounded-lg shadow-lg">
+                <div className="absolute flex flex-col md:gap-4 top-0 left-0 w-full max-w-[10rem] sm:max-w-[13rem]  md:max-w-[15rem] lg:max-w-[21rem] border-[1px] lg:border-[0px] bg-white p-2 md:p-6 rounded-lg shadow-lg">
                     
                     <h1 className=" text-[12px] md:text-[15px]"> Total Visit </h1>
                     <h2 className=" text-[14px] md:text-[26px]"> 2,402</h2>
@@ -111,9 +111,9 @@ export default function Home() {
             
             <div className="relative w-full flex ">
 
-              <div className="w-full flex flex-col gap-2 md:gap-10 p-2 md:p-8">
+              <div className="w-full flex flex-col gap-10 md:gap-15 p-2 md:p-8">
 
-                <div className="bg-[#267ff5] w-full max-w-[20rem] flex gap-4 p-5 rounded-3xl rounded-tl-none">
+                <div className="bg-[#267ff5] w-full max-w-[18rem] md:max-w-[20rem] flex gap-4 p-2 md:p-5 rounded-3xl rounded-tl-none">
 
                   <figure className="bg-white flex w-[5rem] h-[2.8rem] rounded-full">
 
@@ -130,7 +130,7 @@ export default function Home() {
 
                 <div className="flex gap-10 justify-end ">
 
-                  <div className="w-full max-w-[20rem] flex gap-4 p-5 rounded-3xl rounded-tl-none shadow-xl">
+                  <div className="w-full max-w-[18rem] md:max-w-[20rem] flex gap-4 p-2 md:p-5 rounded-3xl rounded-tl-none shadow-xl">
 
                     <figure className="bg-[#b3d4fe] flex w-[5rem] h-[2.8rem] rounded-full">
 
@@ -147,7 +147,7 @@ export default function Home() {
 
                 </div>
 
-                <div className="w-full max-w-[20rem] flex gap-4 p-5 rounded-3xl rounded-tl-none shadow-xl">
+                <div className="w-full max-w-[18rem] md:max-w-[20rem] flex gap-4 p-2 md:p-5 rounded-3xl rounded-tl-none shadow-xl">
 
                   <figure className="bg-[#b3d4fe] flex w-[5rem] h-[2.8rem] rounded-full">
 
