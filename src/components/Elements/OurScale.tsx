@@ -23,7 +23,7 @@ const OurScale = () => {
                     
                     <div className="w-full h-full max-h-[7rem] relative pt-10">
                         <Image
-                            src="/assets/Image/scale/umkm.png"
+                            src="/assets/Image/Scale/umkm.png"
                             alt="MyApp Logo"
                             className='absolute -top-[7rem] -right-[4rem] '
                             width={1350}
@@ -43,7 +43,7 @@ const OurScale = () => {
                     
                     <div className="w-full h-full max-h-[10rem] relative pt-8">
                     <Image
-                        src="/assets/Image/scale/goverment.png"
+                        src="/assets/Image/Scale/goverment.png"
                         alt="MyApp Logo"
                         className='absolute -top-[7rem] -right-[4.5rem] '
                         width={1450}
@@ -65,7 +65,7 @@ const OurScale = () => {
                     
                     <div className="w-full h-full max-h-[7rem] relative pt-10">
                     <Image
-                        src="/assets/Image/scale/personal.png"
+                        src="/assets/Image/Scale/personal.png"
                         alt="MyApp Logo"
                         className='absolute -top-[8rem] -right-[4rem] '
                         width={1350}
@@ -87,7 +87,7 @@ const OurScale = () => {
                     
                     <div className="w-full h-full max-h-[10rem] relative pt-8">
                     <Image
-                        src="/assets/Image/scale/perusahaan.png"
+                        src="/assets/Image/Scale/perusahaan.png"
                         alt="MyApp Logo"
                         className='absolute -top-[7rem] -right-[3rem] '
                         width={150}
