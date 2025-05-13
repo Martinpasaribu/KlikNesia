@@ -27,7 +27,7 @@ export default function Home() {
 
 
               <p className="text-3xl font-bold bg-gradient-to-r from-[#36d1f4] via-[#1537c0] to-[#027bbc] bg-clip-text text-transparent">
-                Kliknesia
+                Click Usaha
               </p>
 
 

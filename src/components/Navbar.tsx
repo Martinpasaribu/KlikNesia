@@ -22,7 +22,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           <Link href="/" className="font-bold text-lg">
             <Image
-              src="/assets/Icon/IconMain.png"
+              src="/assets/Icon/Main/CU_Icon.png"
               alt="MyApp Logo"
               width={112}
               height={132}
