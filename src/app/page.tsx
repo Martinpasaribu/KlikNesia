@@ -171,6 +171,7 @@ export default function Home() {
           </div>
 
 
+
           {/* Side 3 */}
           <div className="pt-[8rem]">
 
@@ -199,6 +200,105 @@ export default function Home() {
 
           </div>
 
+
+          {/* Side 4  */}
+          <div className="w-full flex flex-col 3xl:flex-row gap-8 lg:gap-4 p-2 lg:p-4 md:flex-row justify-center items-center rounded-3xl bg-gradient-to-t  dark:from-blue-500 via-blue-500/10 to-transparent mt-[6.5rem]">
+
+          
+            <div className="w-full max-w-[40rem] flex flex-col gap-4 lg:gap-8 p-2">
+
+              <div className="w-full max-w-[5rem] flex text-md text-[#267ff5] bg-[#267ff5] dark:text-white rounded-3xl rounded-tl-none">
+                <h1 className="m-auto text-white">Service</h1>
+              </div>
+
+
+              <h1 className="text-3xl md:text-[2rem] lg:text-[2.7rem] text-slate-800 w-full max-w-[35rem]">Our The Best Services</h1>
+              <p className="text-[14px] text-slate-400"> Capitalize on low hanging to loop identify a ballpark value added activity beta the digital divided with additional click throughs from will close the bottom </p> 
+
+              <button className="w-full text-[16px] font-semibold max-w-[8em] border-dashed border-[1px] border-blue-400 px-4 py-2 text-slate-800 rounded-xl bg-[#a4f06b]">
+                  <h1> Explore  </h1>
+              </button>
+
+            </div>
+            
+            <div className="relative w-full max-w-[36rem] flex ">
+
+              <div className="w-full flex flex-col gap-4 md:gap-4 p-2 md:px-4 pt-[5rem]">
+
+                <div className="w-full max-w-[12rem] md:max-w-[16rem] shadow-main-glow flex flex-col gap-4 p-2 py-5 md:p-5 md:py-11 rounded-3xl rounded-tl-none">
+
+                  <figure className="bg-[#e0ecfb] flex w-[5rem] h-[5rem] rounded-full">
+
+                    <Images iconName="Services/computer" size="w-[3rem] h-[3rem] m-auto" />
+
+                  </figure>
+
+                  <div className="flex flex-col gap-1 md:gap-3">
+                    <p className="text-[16px] md:text-[21px] text-slate-800 font-bold" >Web Development</p>
+                    <p className="text-slate-400 font-semibold text-[9px] md:text-[13px]">Modern, fast, and responsive websites tailored to your business needs.</p>
+                  </div>
+
+                </div>
+
+                <div className="w-full max-w-[12rem] md:max-w-[16rem] shadow-sub-glow flex flex-col gap-4 p-2 md:p-5 py-5 md:py-11 rounded-3xl rounded-tl-none">
+
+                  <figure className="bg-[#e0ecfb] flex w-[5rem] h-[5rem] rounded-full">
+
+                    <Images iconName="Services/apps" size="w-[2.5rem] h-[2.5rem] m-auto" />
+
+                  </figure>
+
+                  <div className="flex flex-col gap-1 md:gap-3">
+                    <p className="text-[16px] md:text-[21px] text-slate-800 font-bold" >Mobile Apps</p>
+                    <p className="text-slate-400 font-semibold text-[9px] md:text-[13px]">Smooth and intuitive mobile apps for iOS and Android platforms.</p>
+                  </div>
+
+                </div>
+
+      
+
+              </div>
+
+              <div className="w-full flex flex-col gap-4 md:gap-5 p-2 md:px-4 pb-8">
+
+                <div className="w-full max-w-[12rem] md:max-w-[16rem] shadow-sub-glow flex flex-col gap-4 p-2 md:p-5 py-5 md:py-11 rounded-3xl rounded-tl-none">
+
+                  <figure className="bg-[#e0ecfb] flex w-[5rem] h-[5rem] rounded-full">
+
+                    <Images iconName="Services/brand" size="w-[2.5rem] h-[2.5rem] m-auto" />
+
+                  </figure>
+
+                  <div className="flex flex-col gap-1 md:gap-3">
+                    <p className="text-[16px] md:text-[21px] text-slate-800 font-bold" >Branding</p>
+                    <p className="text-slate-400 font-semibold text-[9px] md:text-[13px]">Visual identities that make your brand stand out and stay memorable.</p>
+                  </div>
+
+                </div>
+
+                <div className="w-full max-w-[12rem] md:max-w-[16rem] shadow-sub-glow flex flex-col gap-4 p-2 md:p-5 py-5 md:py-11 rounded-3xl rounded-tl-none">
+
+                  <figure className="bg-[#e0ecfb] flex w-[5rem] h-[5rem] rounded-full">
+
+                    <Images iconName="Services/puzzle" size="w-[2.5rem] h-[2.5rem] m-auto" />
+
+                  </figure>
+
+                  <div className="flex flex-col gap-1 md:gap-3">
+                    <p className="text-[16px] md:text-[21px] text-slate-800 font-bold" >Design</p>
+                    <p className="text-slate-400 font-semibold text-[9px] md:text-[13px]">Creative and functional designs for digital and print media.</p>
+                  </div>
+
+                </div>
+      
+
+              </div>
+
+
+            </div>
+
+
+          </div>
 
         </div>
   );

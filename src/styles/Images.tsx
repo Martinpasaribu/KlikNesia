@@ -10,8 +10,8 @@ const Images: React.FC<IconProps> = ({ iconName, size }) => {
     <Image
       src={`/assets/Image/${iconName}.png`}
       alt={iconName}
-      width={0}
-      height={0}
+      width={1000}
+      height={1000}
       className={size} // Ukuran diatur lewat Tailwind class
     />
   );
