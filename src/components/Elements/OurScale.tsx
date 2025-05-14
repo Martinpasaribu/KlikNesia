@@ -17,7 +17,7 @@ const OurScale = () => {
             </button>
 
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-5 gap-[4rem] mt-[2rem] md:mt-[4rem] ">
+            <div className="grid grid-cols-1 md:grid-cols-2 md1:grid-cols-3 xl:grid-cols-4 p-5 gap-[4rem] mt-[2rem] md:mt-[4rem] ">
 
                 <figure className="h-full flex flex-col gap-6 p-4 py-10 bg-white rounded-[3rem]">
                     
