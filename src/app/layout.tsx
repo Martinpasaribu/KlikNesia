@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Providers } from "@/store/provider";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "My App",
   description: "A Next.js app with SSR and dark mode",
 };

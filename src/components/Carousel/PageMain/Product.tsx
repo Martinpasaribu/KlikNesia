@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
+
 const slides = [
   {
     img: "/assets/Image/Carousel/application.png",
@@ -26,8 +27,11 @@ const slides = [
 ];
 
 export default function CarouselProduct() {
+
   const [current, setCurrent] = useState(0);
   const visibleCount = useResponsiveCount();
+  const [product, setProduct] = useState<[]>([]);
+
 
   const next = () => {
     if (current + visibleCount < slides.length) {
@@ -47,6 +51,26 @@ export default function CarouselProduct() {
       setCurrent(0);
     }
   }, [visibleCount]);
+
+
+  useEffect(() => {
+    const fetchInstagramPosts = async () => {
+      try {
+        const response = await fetch("/api/product");
+        const data = await response.json();
+        setProduct(data.data);
+        console.log(product)
+
+        console.log('data hasil dari client : ', data.data)
+      } catch (error) {
+                      
+        console.error("Error fetching posts:", error);
+      }
+    };
+
+    fetchInstagramPosts();
+  }, []);
+
 
   return (
     <div className="py-10 absolute -top-[8rem] overflow-hidden w-full">
@@ -123,7 +147,9 @@ export default function CarouselProduct() {
 
 // Hook untuk menentukan jumlah slide yang terlihat berdasarkan lebar layar
 function useResponsiveCount() {
+
   const [count, setCount] = useState(3);
+  
 
   useEffect(() => {
     const updateCount = () => {
