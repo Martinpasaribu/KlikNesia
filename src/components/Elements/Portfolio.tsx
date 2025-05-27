@@ -1,6 +1,7 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import axios from "axios";
 
 const items = [
   {
@@ -29,21 +30,41 @@ const items = [
   },
 ];
 
-const categories = ["All", "Web", "Design", "Interior", "Tech"];
+const categories = ["All", "Portofolio", "Tools", "UI/UX", "Aplication","e-commerce","Education","Blog","Lain"];
 
 export default function PortfolioGallery() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
 
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [data, setData] = useState([]);
+    const testProduct = async () => {
+      
+      try {
+        const respone = await axios.get('https://portofolio-server-tau.vercel.app/product');
+        console.log(respone);
+        setData(respone.data);
+  
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      } catch (error ) {
+        
+      }
+    }
+    useEffect (() => {
+      testProduct();
+    },[])
+    
   const filtered = selectedCategory === "All"
-    ? items
-    : items.filter((item) => item.category === selectedCategory);
+    ? data
+    : data.filter((item) => item.kategoriid === selectedCategory);
 
   return (
-    <section className="w-full px-6 py-12 bg-white">
-      <div className="max-w-6xl mx-auto text-center">
-        <p className="text-sm font-medium text-blue-500 bg-blue-100 inline-block px-3 py-1 rounded-full mb-4">
-          Work
-        </p>
+    <section className="w-full px-6 py-[5rem] bg-white">
+      <div className="max-w-6xl mx-auto text-center flex flex-col gap-8 ">
+
+        <div className="flex-center">
+          <p className="text-sm font-medium text-blue-500 bg-blue-100 inline-block px-3 py-1 rounded-full mb-4 w-[5rem] ">
+            Work
+          </p>
+        </div>
         <h2 className="text-3xl font-bold mb-6">
           Our Work <span className="text-blue-600">Portfolio</span>
         </h2>
@@ -66,16 +87,16 @@ export default function PortfolioGallery() {
         </div>
 
         {/* Horizontal Scroll Gallery */}
-        <div className="flex gap-6 overflow-x-auto scrollbar-hide px-2">
+        <div className="flex gap-6 overflow-x-auto scrollbar-hide px-5">
           {filtered.map((item, index) => (
             <div
               key={index}
-              className="min-w-[250px] flex-shrink-0  overflow-hidden  hover:shadow-lg transition-shadow duration-300"
+              className="min-w-[350px] flex-shrink-0  overflow-hidden  hover:shadow-lg transition-shadow duration-300 p-2 gap-2 rounded-lg"
             >
               <div className="relative w-full h-[250px] overflow-hidden rounded-2xl shadow">
                 <Image
-                  src={item.image}
-                  alt={item.title}
+                  src={item.gambar}
+                  alt={item.judul}
                   layout="fill"
                   objectFit="cover"
                   className="transition-transform duration-300 hover:scale-110"
@@ -83,8 +104,8 @@ export default function PortfolioGallery() {
               </div>
 
               <div className="p-4 text-left">
-                <h3 className="font-bold text-md text-blue-600">{item.title}</h3>
-                <p className="text-sm text-gray-600">{item.category} – {item.year}</p>
+                <h3 className="font-bold text-md text-blue-600">{item.judul}</h3>
+                <p className="text-sm text-gray-600">{item.kategoriid} – {item.framework}</p>
               </div>
             </div>
           ))}
