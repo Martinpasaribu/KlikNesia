@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://clickusaha.com
+
+# Sitemaps
+Sitemap: https://clickusaha.com/sitemap.xml

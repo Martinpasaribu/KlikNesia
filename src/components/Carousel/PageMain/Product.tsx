@@ -50,6 +50,7 @@ export default function CarouselProduct() {
     if (current + visibleCount > slides.length) {
       setCurrent(0);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [visibleCount]);
 
 
