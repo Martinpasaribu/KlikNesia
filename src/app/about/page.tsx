@@ -14,10 +14,10 @@ const AboutPage = () => {
           <span>Ratings</span>
           <span className="text-yellow-400 text-xl">⭐ 5.0</span>
           <div className="flex -space-x-2">
-            <Image src="/avatars/avatar1.jpg" alt="User" width={32} height={32} className="rounded-full border-2 border-white" />
-            <Image src="/avatars/avatar2.jpg" alt="User" width={32} height={32} className="rounded-full border-2 border-white" />
-            <Image src="/avatars/avatar3.jpg" alt="User" width={32} height={32} className="rounded-full border-2 border-white" />
-            <div className="w-8 h-8 bg-blue-600 text-white text-sm flex items-center justify-center rounded-full border-2 border-white">2k+</div>
+            <Image src="/assets/avatar/avatar.png" alt="User" width={28} height={28} className="rounded-full border-2 border-white" />
+            <Image src="/assets/avatar/avatar.png" alt="User" width={28} height={28} className="rounded-full border-2 border-white" />
+            <Image src="/assets/avatar/avatar.png" alt="User" width={28} height={28} className="rounded-full border-2 border-white" />
+            <div className="w-8 h-8 bg-blue-600 text-white text-sm flex items-center justify-center rounded-full border-2 border-white">100+</div>
           </div>
         </div>
       </section>

@@ -19,30 +19,41 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="hidden md:block fixed top-0 left-0 w-full z-50 backdrop-blur bg-white/30 dark:bg-[rgb(16_24_32)/0.3] text-white p-4">
-        <div className="flex justify-between items-center max-w-8xl mx-auto">
-          <Link href="/" className="font-bold text-lg">
+      <nav className="hidden md:block fixed top-0 left-0 w-full z-50 p-4">
+        <div className="flex justify-center items-center max-w-8xl mx-auto relative">
+
+          <Link href="/" className="font-bold text-lg absolute top-0 left-0">
             <Image
               src="/assets/Icon/Main/CU_Icon.png"
               alt="MyApp Logo"
-              width={112}
-              height={132}
+              width={100}
+              height={112}
             />
           </Link>
 
-          <div className="flex gap-4 items-center dark:text-white text-slate-800 text-lg font-semibold">
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/blog">Blog</Link>
-            <Link href="/partner">Partner with us</Link>
-            <button onClick={() => setIsContactOpen(true)}>Contact</button> {/* ✅ */}
-            <button
-              onClick={() => dispatch(toggleTheme())}
-              className="bg-white text-black dark:bg-gray-700 dark:text-white px-2 py-1 rounded"
-            >
-              {mode === "dark" ? "🌞 Light" : "🌙 Dark"}
-            </button>
+          <div className="flex gap-4 items-center dark:text-white text-slate-600 text-md font-semibold backdrop-blur bg-white/30 dark:bg-[rgb(16_24_32)/0.3] p-3 px-10 rounded-xl">
+            <Link href="/">HOME</Link>
+            <Link href="/about">ABOUT</Link>
+            {/* <Link href="/blog">Blog</Link> */}
+            {/* <Link href="/partner">Partner with us</Link> */}
+            <button onClick={() => setIsContactOpen(true)}>CONTACT</button> {/* ✅ */}
+
+
           </div>
+
+          <div className="absolute right-0 top-0">
+            <div
+              onClick={() => dispatch(toggleTheme())}
+              className="w-15 h-8 flex items-center bg-black/10 dark:bg-[rgb(16_24_32)/0.3]  dark:bg-gray-700 rounded-md p-1 cursor-pointer transition-colors"
+            >
+              <div className="text-sm px-1">{mode === "dark" ? "🌞" : "🌙"}</div>
+              {/* <div
+                className={`bg-white w-6 h-6 rounded-full shadow-md transform duration-300 ease-in-out ml-auto
+                  ${mode === "dark" ? "translate-x-4" : "translate-x-0"}`}
+              /> */}
+            </div>
+          </div>
+
         </div>
       </nav>
 

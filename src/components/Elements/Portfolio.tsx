@@ -2,40 +2,15 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import axios from "axios";
+import { Product } from "@/models/product";
 
-const items = [
-  {
-    title: "CANVA",
-    category: "Design",
-    image: "/assets/Image/Carousel/ecommerce.png",
-    year: "2023",
-  },
-  {
-    title: "LIVINGROOM",
-    category: "Interior",
-    image: "/assets/Image/Carousel/education.png",
-    year: "2023",
-  },
-  {
-    title: "AR",
-    category: "Tech",
-    image: "/assets/Image/Carousel/education.png",
-    year: "2023",
-  },
-  {
-    title: "ZOOM",
-    category: "Web",
-    image: "/assets/Image/Carousel/ecommerce.png",
-    year: "2023",
-  },
-];
 
 const categories = ["All", "Portofolio", "Tools", "UI/UX", "Aplication","e-commerce","Education","Blog","Lain"];
 
 export default function PortfolioGallery() {
 
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<Product[]>([]); // ← benar
     const testProduct = async () => {
       
       try {
@@ -60,7 +35,7 @@ export default function PortfolioGallery() {
     <section className="w-full px-6 py-[5rem] bg-white">
       <div className="max-w-6xl mx-auto text-center flex flex-col gap-8 ">
 
-        <div className="flex-center">
+        <div className="flex-center hidden">
           <p className="text-sm font-medium text-blue-500 bg-blue-100 inline-block px-3 py-1 rounded-full mb-4 w-[5rem] ">
             Work
           </p>
