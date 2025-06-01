@@ -85,7 +85,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           gtag('config', 'G-78LPKBXL1J');
           `}
         </Script>
-        <Toaster position="top-center" />
+        <Toaster position="bottom-right" />
         <Providers>
           <ThemeProvider>
             <Layout>

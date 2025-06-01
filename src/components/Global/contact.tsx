@@ -1,7 +1,13 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { X } from "lucide-react";
+import { useAppDispatch } from '@/lib/hooks/hooks'
+import { addContact } from "@/lib/slice/contactSlice";
+import toast from 'react-hot-toast';
+import { ContactModels } from "@/models/contact/contact_models";
+
+
 
 interface ContactModalProps {
   open: boolean;
@@ -9,6 +15,67 @@ interface ContactModalProps {
 }
 
 export default function ContactModal({ open, onClose }: ContactModalProps) {
+
+  const dispatch = useAppDispatch();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const [contact, setContact] = useState<ContactModels>({
+    name: '',
+    email: '',
+    phone: 0,
+    message: '',
+  });
+
+  // const { isLoading, isError } = useAppSelector((state) => state.contact)
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const handleSubmit = async (e:any) => {
+        e.preventDefault();
+    
+        if (contact.message === '') {
+          toast.error('Pesan tidak boleh kosong!');
+          return;
+        }
+    
+        setIsLoading(true);
+
+        try {
+
+            e.preventDefault();
+            await dispatch(addContact(contact)).unwrap();
+
+            toast.success('Pesan berhasil dikirim!');
+            onClose(); // Tutup modal
+            
+            setContact({ name: '', email: '', phone: 0,  message: '' });
+        
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        } catch (err:any) {
+
+            // tampilkan error dari backend jika ada
+            const errorMessage = err || 'Gagal mengirim pesan. Silakan coba lagi.';
+            toast.error(errorMessage);
+
+        } finally {
+          setIsLoading(false);
+        }
+        
+      };
+
+      const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        // Validasi angka (hanya izinkan digit)
+        if (name === 'phone' && !/^\d*$/.test(value)) {
+            return; // Abaikan input jika tidak valid
+        }
+
+        setContact((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
+    };
+
+
   useEffect(() => {
     if (!open) return;
     const handleEsc = (e: KeyboardEvent) => {
@@ -38,36 +105,57 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
         </button>
         <h2 className="text-xl font-bold mb-4 text-black dark:text-white">Contact Us</h2>
         <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            alert("Pesan berhasil dikirim!");
-            onClose();
-          }}
+          onSubmit={handleSubmit}
         >
           <input
-            type="text"
+            type="text" 
+            name="name" 
+            id="name" 
+            value={contact.name}
+            onChange={handleChange}
             placeholder="Nama"
             required
             className="w-full mb-3 px-4 py-2 border rounded dark:bg-gray-700 dark:text-white"
           />
           <input
-            type="email"
+            type="email" 
+            name="email" 
+            id="email" 
+            value={contact.email}
+            onChange={handleChange}
+            placeholder="Email"
+            required
+            className="w-full mb-3 px-4 py-2 border rounded dark:bg-gray-700 dark:text-white"
+          />
+          <input
+            type="tel" 
+            pattern="\d{10,15}" 
+            name="phone" id="phone"
+            value={contact.phone}
+            onChange={handleChange}
             placeholder="Email"
             required
             className="w-full mb-3 px-4 py-2 border rounded dark:bg-gray-700 dark:text-white"
           />
           <textarea
-            placeholder="Pesan"
+            id="message" 
+            name="message" 
+            rows={4} 
+            placeholder="Write your thoughts here..."
             required
+            value={contact.message}
+            onChange={handleChange}
             className="w-full mb-3 px-4 py-2 border rounded dark:bg-gray-700 dark:text-white"
-            rows={4}
+            
           />
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+            disabled={isLoading}
+            className={`w-full bg-blue-600 text-white py-2 rounded ${isLoading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-700'}`}
           >
-            Kirim
+            {isLoading ? 'Mengirim...' : 'Kirim'}
           </button>
+
         </form>
       </div>
     </div>

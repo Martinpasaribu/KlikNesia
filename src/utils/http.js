@@ -9,12 +9,18 @@ import axios from 'axios';
 
 // export const UrlMain = 'https://api.adhisthanavillas.com/api/v1'
 
-export const UrlMain = 'https://portofolio-server-tau.vercel.app'
+export const UrlMain = 'https://server-startup.vercel.app/api/v1'
+export const UrlMain2 = 'https://portofolio-server-tau.vercel.app/api/v1'
 
 // Konfigurasi untuk server
 
 export const http = axios.create({
   baseURL: `${UrlMain}`,
+  withCredentials: true,
+});
+
+export const http2 = axios.create({
+  baseURL: `${UrlMain2}`,
   withCredentials: true,
 });
 

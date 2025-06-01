@@ -1,5 +1,35 @@
 // app/about/page.tsx
 import Image from 'next/image';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us - Click Usaha",
+  description: "Pelajari lebih dalam tentang Click Usaha, platform terpercaya untuk membantu pengembangan bisnis Anda dengan solusi digital inovatif dan layanan terbaik.",
+  keywords: "Tentang Click Usaha, Sejarah Click Usaha, Platform bisnis digital, Solusi bisnis online, Pengembangan usaha, Layanan Click Usaha",
+  openGraph: {
+    title: "Click Usaha",
+    description: "Click Usaha - Mitra digital terpercaya untuk kemajuan bisnis Anda.",
+    url: "https://clickusaha.com/about",
+    siteName: "Click Usaha",
+    images: [
+      {
+        url: "https://clickusaha.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Click Usaha",
+      },
+    ],
+    locale: "id_ID",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Click Usaha",
+    description: "Click Usaha - Mitra digital terpercaya untuk kemajuan bisnis Anda.",
+    images: ["https://clickusaha.com/og-image2.png"],
+  },
+};
+
 
 const AboutPage = () => {
   return (
