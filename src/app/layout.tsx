@@ -66,9 +66,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
+      {/* <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
+      </head> */}
       {/* 👆 suppressHydrationWarning membantu Next menghindari warning */}
       <body className={`${geistSans.variable} ${geistMono.variable} w-full`}>
 

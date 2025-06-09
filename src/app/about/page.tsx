@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 const AboutPage = () => {
   return (
-    <div className="max-w-8xl mx-auto px-4 py-16 space-y-24">
+    <div className="max-w-8xl mx-4 px-0 py-8 space-y-[2rem] md:space-y-[3rem]">
       {/* Header */}
       <section className="text-center space-y-2">
         <h1 className="text-4xl font-bold">About</h1>
@@ -54,52 +54,52 @@ const AboutPage = () => {
 
       {/* Values Section */}
 
-    <section className="flex  flex-col md2:flex-row items-center justify-around">
-        {/* Gambar kiri */}
-        <div className="relative w-full max-w-[50rem] h-[480px] md:h-[650px]">
-            {/* Gambar belakang */}
-            <Image
-            src="/assets/Image/about/creative.png"
-            alt="Server Room"
-            width={450}
-            height={800}
-            className="rounded-xl object-cover absolute top-0 left-0 w-full max-w-[15rem] md:max-w-[19rem] md2:max-w-[26rem]"
-            />
+      <section className="flex  flex-col md2:flex-row items-center justify-around">
+          {/* Gambar kiri */}
+          <div className="relative w-full max-w-[50rem] h-[480px] md:h-[650px]">
+              {/* Gambar belakang */}
+              <Image
+              src="/assets/Image/about/creative.png"
+              alt="Server Room"
+              width={450}
+              height={800}
+              className="rounded-xl object-cover absolute top-0 left-0 w-full max-w-[15rem] md:max-w-[19rem] md2:max-w-[26rem]"
+              />
 
-            {/* Gambar depan, lebih besar dan agak menutupi */}
-            <figure className='relative w-full h-[480px] md:h-[650px]'>
-                <Image
-                src="/assets/Image/about/creative.jpg"
-                alt="Staff"
-                width={450}
-                height={550}
-                className="rounded-xl object-cover absolute bottom-0 right-0 shadow-lg w-full max-w-[15rem] md:max-w-[22rem] md2:max-w-[28rem]"
-                />
-            </figure>
-        </div>
+              {/* Gambar depan, lebih besar dan agak menutupi */}
+              <figure className='relative w-full h-[480px] md:h-[650px]'>
+                  <Image
+                  src="/assets/Image/about/creative.jpg"
+                  alt="Staff"
+                  width={450}
+                  height={550}
+                  className="rounded-xl object-cover absolute bottom-0 right-0 shadow-lg w-full max-w-[15rem] md:max-w-[22rem] md2:max-w-[28rem]"
+                  />
+              </figure>
+          </div>
 
-        {/* Konten kanan */}
-        <div className="px-5 md2:px-10 w-full md2:max-w-[25rem] flex justify-end items-end">
-            <figure className='w-full max-w-2xl flex flex-col gap-8'>
-                <h2 className="text-sm font-semibold text-gray-500">OUR VALUES</h2>
-                <h3 className="text-4xl font-bold leading-tight">
-                Meet OK Media.<br />
-                digital.<br />
-                innovative.<br />
-                creative.
-                </h3>
-                <p className="text-gray-600">
-                Join a team who works as hard as you do,<br />
-                and allows your business and technology<br />
-                manipulate big data.
-                </p>
-            </figure>
-        </div>
-    </section>
+          {/* Konten kanan */}
+          <div className="px-1 md:px-5 md2:px-10 w-full md2:max-w-[25rem] flex justify-end items-end mt-5">
+              <figure className='w-full max-w-2xl flex flex-col gap-8'>
+                  <h2 className="text-sm md:text-lg font-semibold text-gray-500">OUR VALUES</h2>
+                  <h3 className="text-2xl md:text-4xl font-bold leading-tight">
+                  Meet OK Media.<br />
+                  digital.<br />
+                  innovative.<br />
+                  creative.
+                  </h3>
+                  <p className="text-gray-600">
+                  Join a team who works as hard as you do,<br />
+                  and allows your business and technology<br />
+                  manipulate big data.
+                  </p>
+              </figure>
+          </div>
+      </section>
 
 
       {/* Mission Section */}
-      <section className="grid md:grid-cols-2 gap-8 items-start">
+      {/* <section className="grid md:grid-cols-2 gap-8 items-start">
         <div className="space-y-6">
           <div>
             <h2 className="text-sm font-semibold text-gray-500">OUR MISSION</h2>
@@ -133,7 +133,78 @@ const AboutPage = () => {
         </div>
 
         <Image src="/assets/Image/about/meet.jpg" alt="Man on phone" width={500} height={500} className="rounded-xl object-cover" />
+      </section> */}
+
+      {/* Vision & Mission Section */}
+      <section className="grid md:grid-cols-2 gap-8 items-start mt-5">
+        <div className="space-y-6">
+          <div>
+            <h2 className="text-sm md:text-xl font-semibold text-gray-500 mb-4">VISION</h2>
+            <h3 className="text-2xl md:text-3xl font-bold leading-tight">
+              Digital Transformation for MSMEs & Mid-Sized Businesses
+            </h3>
+            <p className="text-gray-600 mt-2">
+              Leading the acceleration of digital transformation for MSMEs and mid-sized companies through affordable technology solutions, practical education, and ongoing support.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            <h2 className="text-sm md:text-xl font-semibold text-gray-500">MISSION</h2>
+
+            <div>
+              <h4 className="font-semibold text-indigo-600">01</h4>
+              <h5 className="font-semibold">All-in-One Solutions</h5>
+              <p className="text-gray-600 text-sm">
+                Ready-to-use applications tailored to MSME needs like digital cashier systems, inventory management, and marketing tools.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-indigo-600">02</h4>
+              <h5 className="font-semibold">Supportive Consultation</h5>
+              <p className="text-gray-600 text-sm">
+                Affordable advisory services to help identify digital challenges and provide practical solutions.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-indigo-600">03</h4>
+              <h5 className="font-semibold">Adaptive Education</h5>
+              <p className="text-gray-600 text-sm">
+                Case-based training programs that are easy to apply and tailored to the realities of MSMEs.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-indigo-600">04</h4>
+              <h5 className="font-semibold">Broad Collaboration</h5>
+              <p className="text-gray-600 text-sm">
+                Partnering with government, communities, and industry to expand access to technology.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-indigo-600">05</h4>
+              <h5 className="font-semibold">Data-Driven Impact</h5>
+              <p className="text-gray-600 text-sm">
+                Measuring the real impact of each solution through increased revenue, efficiency, and market reach.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="h-full flex justify-center items-center">
+          <Image
+            src="/assets/Image/about/meet.jpg"
+            alt="Man on phone"
+            width={500}
+            height={500}
+            className="rounded-xl object-cover"
+          />
+        </div>
       </section>
+
+
     </div>
   );
 };

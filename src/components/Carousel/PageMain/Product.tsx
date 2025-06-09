@@ -3,28 +3,30 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 
-const slides = [
+const slides = 
+[
   {
     img: "/assets/Image/Carousel/application.png",
-    text: `"Public's Favorite Online Transportation App"...`,
+    text: `"Building Scalable & Innovative Applications" – Custom solutions tailored to your business needs.`,
   },
   {
     img: "/assets/Image/Carousel/ecommerce.png",
-    text: `Integrated Public Transport with PT KCI...`,
+    text: `"E-Commerce Solutions that Drive Growth" – Empowering digital businesses with modern platforms.`,
   },
   {
     img: "/assets/Image/Carousel/education.png",
-    text: `The first company in Southeast Asia...`,
+    text: `"Transforming Education through Technology" – Smart learning platforms for the digital era.`,
   },
   {
     img: "/assets/Image/Carousel/Portofolio.png",
-    text: `And more company insights...`,
+    text: `"Trusted by Industry Leaders" – Explore our proven track record across various sectors.`,
   },
   {
     img: "/assets/Image/Carousel/Tools.png",
-    text: `Continued success and recognition...`,
+    text: `"Utilizing Modern Tech Stack" – Delivering efficient solutions with the latest tools & frameworks.`,
   },
 ];
+
 
 export default function CarouselProduct() {
 

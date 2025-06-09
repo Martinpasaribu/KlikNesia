@@ -6,4 +6,5 @@ export interface Product {
   kategori : string
   framework : string
   kategoriid : string
+  waktu : Date
 }

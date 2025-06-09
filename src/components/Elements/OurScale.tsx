@@ -10,11 +10,11 @@ const OurScale = () => {
             <h1 className="text-white text-xl md:text-4xl font-semibold text-center mt-10 "> Our Scale</h1>
 
             {/* bg-[#00880c] */}
-            <button className="bg-[rgb(16_24_32)] text-white rounded-3xl py-2 px-4 text-sm">
+            {/* <button className="bg-[rgb(16_24_32)] text-white rounded-3xl py-2 px-4 text-sm">
 
                 <h1>Scale with us</h1>
 
-            </button>
+            </button> */}
 
 
             <div className="grid grid-cols-1 md:grid-cols-2 md1:grid-cols-3 xl:grid-cols-4 p-5 gap-[4rem] mt-[2rem] md:mt-[4rem] ">
@@ -54,7 +54,7 @@ const OurScale = () => {
                     <div className='px-5'>
 
                         <h1 className="text-xl font-bold">GOVERMENT</h1>
-                        <p className="text-[14px]">Usaha Mikro in Indonesia</p>
+                        <p className="text-[14px]">Badan Usaha Pemerintahan </p>
 
                     </div>
                     
@@ -76,7 +76,7 @@ const OurScale = () => {
                     <div className='px-5'>
 
                         <h1 className="text-xl font-bold">PERSONAL</h1>
-                        <p className="text-[14px]">Usaha Mikro in Indonesia</p>
+                        <p className="text-[14px]">Usaha Pribadi Perorangan</p>
 
                     </div>
                     
@@ -98,7 +98,7 @@ const OurScale = () => {
                     <div className='px-5'>
 
                         <h1 className="text-xl font-bold">PERUSAHAAN</h1>
-                        <p className="text-[14px]">Usaha Mikro in Indonesia</p>
+                        <p className="text-[14px]">Bisnis Perusahan Swasta </p>
 
                     </div>
                     

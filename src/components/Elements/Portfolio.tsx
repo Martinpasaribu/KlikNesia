@@ -16,7 +16,13 @@ export default function PortfolioGallery() {
       try {
         const respone = await axios.get('https://portofolio-server-tau.vercel.app/product');
         console.log(respone);
-        setData(respone.data);
+
+        const sortedData = respone.data.sort((a: Product, b: Product) => {
+          return new Date(b.waktu).getTime() - new Date(a.waktu).getTime();
+        });
+
+        setData(sortedData);
+
   
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (error ) {
