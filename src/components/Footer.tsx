@@ -9,7 +9,7 @@ export default function Footer() {
         {/* Logo dan Label */}
         <div className="flex flex-col items-start pt-5">
           <Image
-            src="/assets/Icon/Main/logo_name.png"
+            src="/assets/Icon/Main/CU_Icon.png"
             alt="MyApp Logo"
             width={182}
             height={202}
@@ -30,11 +30,11 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold mb-4">Contact Us</h3>
           <p className="mb-2 text-gray-400">Jl. Pembangunan Bar. No.25, RT.4/RW.10, Bintaro, Kec. Pesanggrahan, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12330</p>
-          <p className="text-gray-400 mb-3">0811-9000-0777</p>
+          <p className="text-gray-400 mb-3">0857-8385-0510</p>
           
           {/* WhatsApp Button */}
           <a
-            href="https://wa.me/6281190000777"
+            href="https://wa.me/6285783850510"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-green-500 hover:bg-green-600 text-white text-sm font-semibold py-2 px-4 rounded-md transition"
@@ -46,12 +46,12 @@ export default function Footer() {
 
       <div className="border-t border-neutral-700">
         <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-xs mb-3 md:mb-0">&copy; 2025 Savoy Residence Official Website.</p>
+          <p className="text-xs mb-3 md:mb-0">&copy; 2025 Click Usaha Official Website.</p>
           <div className="flex space-x-4 text-lg">
-            <a href="https://www.facebook.com/people/Savoy-Residences/61551103118837/?_rdr" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
-            <a href="https://www.instagram.com/savoyresidences" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-            <a href="https://wa.me/6281190000777" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
-            <a href="#" target="_blank" rel="noopener noreferrer"><FaTiktok /></a>
+            <a href="https://www.facebook.com/share/1Dr9YfR6oK" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
+            <a href="https://www.instagram.com/p/DKKCg-jBGKR" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+            <a href="https://wa.me/6285783850510" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
+            <a href="https://www.tiktok.com/@clickusaha"  target="_blank" rel="noopener noreferrer"><FaTiktok /></a>
           </div>
         </div>
       </div>
