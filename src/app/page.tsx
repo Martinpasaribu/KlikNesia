@@ -1,3 +1,4 @@
+"use client"
 
 import CarouselProduct from "@/components/Carousel/PageMain/Product";
 import OurScale from "@/components/Elements/OurScale";
@@ -6,8 +7,16 @@ import Icon from "@/styles/Icon";
 import IconListItem from "@/styles/IconText";
 import Images from "@/styles/Images";
 import Image from "next/image";
+import { useRef } from "react";
 
 export default function Home() {
+
+  const targetRef = useRef<HTMLDivElement>(null);
+
+  const scrollToSection = () => {
+    targetRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+  
 
   return (
 
@@ -17,13 +26,14 @@ export default function Home() {
 
           {/* Side 1 */}
 
-          <div className="w-full flex flex-col gap-8 md:gap-4 sm:flex-row justify-center items-center rounded-3xl bg-gradient-to-t  dark:from-blue-500 via-blue-500/10 to-transparent mt-10">
+          <div className="relative bg- w-full h-screen flex flex-col gap-8 md:gap-4 sm:flex-row justify-center items-center rounded-3xl bg-gradient-to-t  dark:from-blue-500 via-blue-500/10 to-transparent ">
 
-            
+            {/* <div className="absolute inset-0 bg-[linear-gradient(to_right,_rgba(255,255,255,0.05)_1px,_transparent_1px),_linear-gradient(to_bottom,_rgba(255,255,255,0.05)_1px,_transparent_1px)] bg-[size:40px_40px] z-0" /> */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,_rgba(0,188,212,0.1)_1px,_transparent_1px),_linear-gradient(to_bottom,_rgba(0,188,212,0.1)_1px,_transparent_1px)] bg-[size:40px_40px] z-0" />
             <h1 className="hidden text-3xl text-blue-600 dark:text-white">One Solution For Every Your Bisnis.</h1>
 
 
-            <div className="w-full flex flex-col gap-4">
+            <div className="z-10 w-full flex flex-col gap-4">
 
 
               <p className="text-3xl font-bold bg-gradient-to-r from-[#36d1f4] via-[#1537c0] to-[#027bbc] bg-clip-text text-transparent">
@@ -34,8 +44,8 @@ export default function Home() {
               <h1 className="text-3xl md:text-[3rem] text-slate-800 w-full max-w-[35rem] leading-snug lg:eading-normal">One Solution For Every Your Bisnis.</h1>
               <p className=" text-md md:text-[18px] text-slate-500"> Upgrade to the PRO version of Untitled UI to unlock everything. Here’s a 10% discount to say thanks: </p>
               
-              <button className="w-full text-[16px] font-semibold max-w-[12em] border-dashed border-[1px] border-blue-400 px-4 py-2 text-blue-600 rounded-xl">
-                  <h1> Our Product  </h1>
+              <button onClick={scrollToSection} className="w-full text-[16px] font-semibold max-w-[12em] border-dashed border-[1px] border-blue-400 px-4 py-2 text-blue-600 rounded-xl">
+                  <h1 > Our Product  </h1>
               </button>
 
             </div>
@@ -81,6 +91,48 @@ export default function Home() {
 
           </div>
 
+<div className="relative min-h-screen bg-gradient-to-b from-white via-[#eef1fc] to-[#dbe4ff] overflow-hidden">
+  {/* Background grid lines */}
+  <div className="absolute inset-0 
+    bg-[linear-gradient(to_right,_rgba(38,127,245,0.2)_1px,_transparent_1px),_linear-gradient(to_bottom,_rgba(38,127,245,0.2)_1px,_transparent_1px)] 
+    bg-[size:60px_60px] 
+    opacity-20 z-0" />
+
+  {/* Main content container */}
+  <div className="relative h-full min-h-screen z-10 flex flex-col">
+    {/* Text content - centered at top */}
+    <div className="flex-1 flex flex-col items-center justify-center text-center px-4 pt-16 pb-8">
+      <h1 className="text-2xl md:text-5xl font-bold text-gray-800 mb-4">
+        IT Solutions Dashboard <span className="text-sm bg-blue-200 text-blue-700 px-2 py-0.5 rounded">v2.0</span>
+      </h1>
+      <p className="text-md md:text-xl text-gray-600 max-w-xl mb-8">
+        Optimize Your Digital Infrastructure with Data-Driven IT Solutions
+      </p>
+
+      {/* Logo bar */}
+      <div className="flex gap-6 opacity-90 w-full max-w-[40rem] md:max-w-[60rem] flex-wrap justify-center">
+        {["Manajemen produk & inventory", "Aplikasi Task Management", "CRM (Customer Relationship Management)", "Aplikasi Kasir & Keuangan UMKM", "Website Builder"].map((tech, index) => (
+          <div key={index} className="text-[10px] md:text-sm bg-white shadow rounded px-1 md:px-4 py-2 text-gray-700">
+            {tech}
+          </div>
+        ))}
+      </div>
+    </div>
+
+    {/* Dashboard image - fixed at bottom center */}
+    <div className="w-full flex justify-center pb-8">
+      <div className="relative w-full max-w-[20rem] md:max-w-4xl h-[200px] md:h-[400px]">
+        <Image
+          src="/assets/Image/dashboard.png"
+          alt="Dashboard Preview"
+          width={1200}
+          height={800}
+          className="object-contain mx-auto shadow-lg rounded-lg absolute md:-bottom-[8rem]"
+        />
+      </div>
+    </div>
+  </div>
+</div>
 
           {/* Side 2 */}
           <div className="w-full flex flex-col gap-8 lg:gap-4 p-2 lg:p-4 md:flex-row justify-center items-center rounded-3xl bg-gradient-to-t  dark:from-blue-500 via-blue-500/10 to-transparent mt-[6.5rem]">
@@ -88,7 +140,7 @@ export default function Home() {
           
             <div className="w-full flex flex-col gap-4 p-2">
 
-              <div className="w-full max-w-[5rem] flex text-md text-[#267ff5] bg-[#d0def1] dark:text-white rounded-lg">
+              <div className="w-full max-w-[5rem] flex text-md text-[#267ff5] bg-[#267ff5] dark:text-white rounded-lg">
                 <h1 className="m-auto text-white">Process</h1>
               </div>
 
@@ -193,7 +245,7 @@ export default function Home() {
 
 
 
-          <div className="mt-[5rem]">
+          <div ref={targetRef} className="mt-[5rem]">
 
           <PortfolioGallery/>
 

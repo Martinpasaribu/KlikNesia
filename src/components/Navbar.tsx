@@ -26,12 +26,13 @@ export default function Navbar() {
             <Image
               src="/assets/Icon/Main/CU_Icon.png"
               alt="MyApp Logo"
-              width={100}
-              height={112}
+              width={80}
+              height={92}
+              className=""
             />
           </Link>
 
-          <div className="flex gap-4 items-center dark:text-white text-slate-600 text-md font-semibold backdrop-blur bg-white/30 dark:bg-[rgb(16_24_32)/0.3] p-3 px-10 rounded-xl">
+          <div className="flex gap-4 items-center dark:text-white text-slate-500 text-md font-semibold backdrop-blur bg-black/5 dark:bg-[rgb(16_24_32)/0.3] p-3 px-10 rounded-xl">
             <Link href="/">HOME</Link>
             <Link href="/about">ABOUT</Link>
             {/* <Link href="/blog">Blog</Link> */}
@@ -93,13 +94,14 @@ export default function Navbar() {
           <div className="flex flex-col gap-4 p-4 font-semibold">
             <Link href="/" onClick={toggleMenu}>Home</Link>
             <Link href="/about" onClick={toggleMenu}>About</Link>
-            <Link href="/blog" onClick={toggleMenu}>Blog</Link>
-            <Link href="/partner" onClick={toggleMenu}>Partner with us</Link>
+            {/* <Link href="/blog" onClick={toggleMenu}>Blog</Link> */}
+            {/* <Link href="/partner" onClick={toggleMenu}>Partner with us</Link> */}
             <button
               onClick={() => {
                 setIsContactOpen(true); // ✅ buka modal
                 toggleMenu();
               }}
+              className="border-[1px] border-white"
             >
               Contact
             </button>
