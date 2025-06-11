@@ -26,7 +26,7 @@ export default function Home() {
 
           {/* Side 1 */}
 
-          <div className="relative bg- w-full h-screen flex flex-col gap-8 md:gap-4 sm:flex-row justify-center items-center rounded-3xl bg-gradient-to-t  dark:from-blue-500 via-blue-500/10 to-transparent ">
+          <div className="relative bg- w-full h-screen flex flex-col gap-8 md:gap-4 sm:flex-row justify-start mt-5 items-center rounded-3xl bg-gradient-to-t  dark:from-blue-500 via-blue-500/10 to-transparent ">
 
             {/* <div className="absolute inset-0 bg-[linear-gradient(to_right,_rgba(255,255,255,0.05)_1px,_transparent_1px),_linear-gradient(to_bottom,_rgba(255,255,255,0.05)_1px,_transparent_1px)] bg-[size:40px_40px] z-0" /> */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,_rgba(0,188,212,0.1)_1px,_transparent_1px),_linear-gradient(to_bottom,_rgba(0,188,212,0.1)_1px,_transparent_1px)] bg-[size:40px_40px] z-0" />
@@ -44,7 +44,7 @@ export default function Home() {
               <h1 className="text-3xl md:text-[3rem] text-slate-800 w-full max-w-[35rem] leading-snug lg:eading-normal">One Solution For Every Your Bisnis.</h1>
               <p className=" text-md md:text-[18px] text-slate-500"> Upgrade to the PRO version of Untitled UI to unlock everything. Here’s a 10% discount to say thanks: </p>
               
-              <button onClick={scrollToSection} className="w-full text-[16px] font-semibold max-w-[12em] border-dashed border-[1px] border-blue-400 px-4 py-2 text-blue-600 rounded-xl">
+              <button onClick={scrollToSection} className="w-full text-[16px] font-semibold max-w-[12em] border-dashed border-[1px] border-blue-400 px-4 py-2 text-blue-600  bg-white rounded-xl">
                   <h1 > Our Product  </h1>
               </button>
 
@@ -91,48 +91,67 @@ export default function Home() {
 
           </div>
 
-<div className="relative min-h-screen bg-gradient-to-b from-white via-[#eef1fc] to-[#dbe4ff] overflow-hidden">
-  {/* Background grid lines */}
-  <div className="absolute inset-0 
-    bg-[linear-gradient(to_right,_rgba(38,127,245,0.2)_1px,_transparent_1px),_linear-gradient(to_bottom,_rgba(38,127,245,0.2)_1px,_transparent_1px)] 
-    bg-[size:60px_60px] 
-    opacity-20 z-0" />
+          <div className="relative min-h-screen bg-gradient-to-b from-white via-[#eef1fc] to-[#dbe4ff] overflow-hidden">
+            {/* Background grid lines */}
+            <div className="absolute inset-0 
+              bg-[linear-gradient(to_right,_rgba(38,127,245,0.2)_1px,_transparent_1px),_linear-gradient(to_bottom,_rgba(38,127,245,0.2)_1px,_transparent_1px)] 
+              bg-[size:60px_60px] 
+              opacity-20 z-0" />
 
-  {/* Main content container */}
-  <div className="relative h-full min-h-screen z-10 flex flex-col">
-    {/* Text content - centered at top */}
-    <div className="flex-1 flex flex-col items-center justify-center text-center px-4 pt-16 pb-8">
-      <h1 className="text-2xl md:text-5xl font-bold text-gray-800 mb-4">
-        IT Solutions Dashboard <span className="text-sm bg-blue-200 text-blue-700 px-2 py-0.5 rounded">v2.0</span>
-      </h1>
-      <p className="text-md md:text-xl text-gray-600 max-w-xl mb-8">
-        Optimize Your Digital Infrastructure with Data-Driven IT Solutions
-      </p>
+            {/* Main content container */}
+            <div className="relative h-full min-h-screen z-10 flex flex-col">
+              {/* Text content - centered at top */}
+              <div className="flex-1 flex flex-col items-center justify-center text-center px-4 pt-16 pb-8">
+                <h1 className="text-2xl md:text-5xl font-bold text-gray-800 mb-4">
+                  IT Solutions Dashboard <span className="text-sm bg-blue-200 text-blue-700 px-2 py-0.5 rounded">v2.0</span>
+                </h1>
+                <p className="text-md md:text-xl text-gray-600 max-w-xl mb-8">
+                  Optimize Your Digital Infrastructure with Data-Driven IT Solutions
+                </p>
 
-      {/* Logo bar */}
-      <div className="flex gap-6 opacity-90 w-full max-w-[40rem] md:max-w-[60rem] flex-wrap justify-center">
-        {["Manajemen produk & inventory", "Aplikasi Task Management", "CRM (Customer Relationship Management)", "Aplikasi Kasir & Keuangan UMKM", "Website Builder"].map((tech, index) => (
-          <div key={index} className="text-[10px] md:text-sm bg-white shadow rounded px-1 md:px-4 py-2 text-gray-700">
-            {tech}
+                {/* Logo bar */}
+                <div className="flex gap-6 opacity-90 w-full max-w-[40rem] md:max-w-[60rem] flex-wrap justify-center">
+                  {["Manajemen produk & inventory", "Aplikasi Task Management", "CRM (Customer Relationship Management)", "Aplikasi Kasir & Keuangan UMKM", "Website Builder"].map((tech, index) => (
+                    <div key={index} className="text-[10px] md:text-sm bg-white shadow rounded px-1 md:px-4 py-2 text-gray-700">
+                      {tech}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Dashboard image - fixed at bottom center */}
+              <div className="w-full flex justify-center pb-8">
+                <div className="relative w-full max-w-[20rem] md:max-w-xl md2:max-w-4xl h-[200px] md:h-[400px]">
+                  <Image
+                    src="/assets/Image/dashboard.png"
+                    alt="Dashboard Preview"
+                    width={1200}
+                    height={800}
+                    className="object-contain mx-auto shadow-lg rounded-lg absolute md:-bottom-[3rem] md2:-bottom-[8rem]"
+                  />
+                  <div className="relative w-full max-w-[5rem] md:max-w-lg  md2:max-w-4xl h-[200px] md:h-[400px]">
+                    <Image
+                      src="/assets/Image/admin_ds.png"
+                      alt="Dashboard Preview"
+                      width={200}
+                      height={200}
+                      className="object-contain mx-auto shadow-lg rounded-lg absolute -bottom-[1rem] md:-bottom-[10rem] -right-[16rem] md:-right-[9rem]"
+                    />
+                  </div>
+                  <div className="relative w-full max-w-[5rem] md:max-w-4xl h-[200px] md:h-[400px]">
+                    
+                    <Image
+                      src="/assets/Image/admin_ds2.png"
+                      alt="Dashboard Preview"
+                      width={200}
+                      height={200}
+                      className="object-contain mx-auto shadow-lg rounded-lg absolute -top-[8rem] md:-bottom-[1rem] -left-[1rem] md:-left-[8rem]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        ))}
-      </div>
-    </div>
-
-    {/* Dashboard image - fixed at bottom center */}
-    <div className="w-full flex justify-center pb-8">
-      <div className="relative w-full max-w-[20rem] md:max-w-4xl h-[200px] md:h-[400px]">
-        <Image
-          src="/assets/Image/dashboard.png"
-          alt="Dashboard Preview"
-          width={1200}
-          height={800}
-          className="object-contain mx-auto shadow-lg rounded-lg absolute md:-bottom-[8rem]"
-        />
-      </div>
-    </div>
-  </div>
-</div>
 
           {/* Side 2 */}
           <div className="w-full flex flex-col gap-8 lg:gap-4 p-2 lg:p-4 md:flex-row justify-center items-center rounded-3xl bg-gradient-to-t  dark:from-blue-500 via-blue-500/10 to-transparent mt-[6.5rem]">
@@ -254,7 +273,7 @@ export default function Home() {
 
 
           {/* Side 4  */}
-          <div className="w-full flex flex-col 3xl:flex-row gap-8 lg:gap-4 p-2 lg:p-4 md:flex-row justify-center items-center rounded-3xl bg-gradient-to-t  dark:from-blue-500 via-blue-500/10 to-transparent mt-[6.5rem]">
+          <div className="w-full flex flex-col 3xl:flex-row gap-5 lg:gap-4 p-2 lg:p-4 md:flex-row justify-center items-center rounded-3xl bg-gradient-to-t  dark:from-blue-500 via-blue-500/10 to-transparent mb-[2.5rem] md:mb-[4rem] mt-[2rem] md:mt-[6.5rem]">
 
           
             <div className="w-full max-w-[40rem] flex flex-col gap-4 lg:gap-8 p-2">
@@ -275,7 +294,7 @@ export default function Home() {
             
             <div className="relative w-full max-w-[36rem] flex ">
 
-              <div className="w-full flex flex-col gap-4 md:gap-4 p-2 md:px-4 pt-[5rem]">
+              <div className="w-full flex flex-col gap-4 md:gap-4 p-2 md:px-4 pt-[2rem] md:pt-[5rem]">
 
                 <div className="w-full max-w-[12rem] md:max-w-[16rem] shadow-main-glow flex flex-col gap-4 p-2 py-5 md:p-5 md:py-11 rounded-3xl rounded-tl-none">
 
@@ -286,8 +305,8 @@ export default function Home() {
                   </figure>
 
                   <div className="flex flex-col gap-1 md:gap-3">
-                    <p className="text-[16px] md:text-[21px] text-slate-800 font-bold" >Web Development</p>
-                    <p className="text-slate-400 font-semibold text-[9px] md:text-[13px]">Modern, fast, and responsive websites tailored to your business needs.</p>
+                    <p className="text-[14px] md:text-[21px] text-slate-800 font-bold mb-2" >Web Development</p>
+                    <p className="text-slate-400 font-semibold text-[8px] md:text-[13px]">Modern, fast, and responsive websites tailored to your business needs.</p>
                   </div>
 
                 </div>
@@ -301,8 +320,8 @@ export default function Home() {
                   </figure>
 
                   <div className="flex flex-col gap-1 md:gap-3">
-                    <p className="text-[16px] md:text-[21px] text-slate-800 font-bold" >Mobile Apps</p>
-                    <p className="text-slate-400 font-semibold text-[9px] md:text-[13px]">Smooth and intuitive mobile apps for iOS and Android platforms.</p>
+                    <p className="text-[14px] md:text-[21px] text-slate-800 font-bold mb-2" >Mobile Apps</p>
+                    <p className="text-slate-400 font-semibold text-[8px] md:text-[13px]">Smooth and intuitive mobile apps for iOS and Android platforms.</p>
                   </div>
 
                 </div>
@@ -311,7 +330,7 @@ export default function Home() {
 
               </div>
 
-              <div className="w-full flex flex-col gap-4 md:gap-5 p-2 md:px-4 pb-8">
+              <div className="w-full flex flex-col gap-4 md:gap-5 p-2 md:px-4 pb-8 ">
 
                 <div className="w-full max-w-[12rem] md:max-w-[16rem] shadow-sub-glow flex flex-col gap-4 p-2 md:p-5 py-5 md:py-11 rounded-3xl rounded-tl-none">
 
@@ -322,7 +341,7 @@ export default function Home() {
                   </figure>
 
                   <div className="flex flex-col gap-1 md:gap-3">
-                    <p className="text-[16px] md:text-[21px] text-slate-800 font-bold" >Branding</p>
+                    <p className="text-[14px] md:text-[21px] text-slate-800 font-bold mb-2" >Branding</p>
                     <p className="text-slate-400 font-semibold text-[9px] md:text-[13px]">Visual identities that make your brand stand out and stay memorable.</p>
                   </div>
 
@@ -337,8 +356,8 @@ export default function Home() {
                   </figure>
 
                   <div className="flex flex-col gap-1 md:gap-3">
-                    <p className="text-[16px] md:text-[21px] text-slate-800 font-bold" >Design</p>
-                    <p className="text-slate-400 font-semibold text-[9px] md:text-[13px]">Creative and functional designs for digital and print media.</p>
+                    <p className="text-[14px] md:text-[21px] text-slate-800 font-bold mb-2" >Design</p>
+                    <p className="text-slate-400 font-semibold text-[8px] md:text-[13px]">Creative and functional designs for digital and print media.</p>
                   </div>
 
                 </div>

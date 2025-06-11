@@ -21,8 +21,8 @@ export default function Footer() {
           <h3 className="font-semibold mb-4">Sitemaps</h3>
           <ul className="space-y-2 text-gray-400 text-light">
             <li><a href="/about" className="hover:underline">About Us</a></li>
-            <li><a href="/unit" className="hover:underline">The Unit</a></li>
-            <li><a href="/promo" className="hover:underline">Promo</a></li>
+            {/* <li><a href="/unit" className="hover:underline">The Unit</a></li> */}
+            {/* <li><a href="/promo" className="hover:underline">Promo</a></li> */}
           </ul>
         </div>
 
