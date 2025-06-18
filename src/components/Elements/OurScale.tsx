@@ -7,7 +7,7 @@ const OurScale = () => {
   return (
 
         <div className="flex flex-col gap-10 justify-center items-center overflow-hidden py-10">
-            <h1 className="text-white text-xl md:text-4xl font-semibold text-center mt-10 "> Our Scale</h1>
+            <h1 className="text-slate-800 text-xl md:text-4xl font-semibold text-center mt-10 "> Our Scale</h1>
 
             {/* bg-[#00880c] */}
             {/* <button className="bg-[rgb(16_24_32)] text-white rounded-3xl py-2 px-4 text-sm">

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 const AboutPage = () => {
   return (
-    <div className="max-w-8xl mx-4 px-0 py-8 space-y-[2rem] md:space-y-[3rem]">
+    <div className="max-w-8xl mx-4 px-0 py-8 space-y-[2rem] md:space-y-[4rem]">
       {/* Header */}
       <section className="text-center space-y-2">
         <h1 className="text-4xl font-bold">About</h1>
@@ -54,7 +54,8 @@ const AboutPage = () => {
 
       {/* Values Section */}
 
-      <section className="flex  flex-col md2:flex-row items-center justify-around">
+      <section className="flex flex-col md2:flex-row items-center justify-around">
+          
           {/* Gambar kiri */}
           <div className="relative w-full max-w-[50rem] h-[480px] md:h-[650px]">
               {/* Gambar belakang */}
@@ -136,11 +137,12 @@ const AboutPage = () => {
       </section> */}
 
       {/* Vision & Mission Section */}
-      <section className="grid md:grid-cols-2 gap-8 items-start mt-5">
+
+      <section className="grid md:grid-cols-2 gap-8 items-start mt-5  pb-5">
         <div className="space-y-6">
           <div>
             <h2 className="text-sm md:text-xl font-semibold text-gray-500 mb-4">VISION</h2>
-            <h3 className="text-2xl md:text-3xl font-bold leading-tight">
+            <h3 className="text-2xl md:text-3xl font-bold leading-tight md2:text-3xl mb-4 md2:mb-8">
               Digital Transformation for MSMEs & Mid-Sized Businesses
             </h3>
             <p className="text-gray-600 mt-2">

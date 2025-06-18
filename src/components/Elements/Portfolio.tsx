@@ -38,16 +38,16 @@ export default function PortfolioGallery() {
     : data.filter((item) => item.kategoriid === selectedCategory);
 
   return (
-    <section className="w-full px-1 md:px-6 py-[2rem] md:py-[5rem] bg-white">
+    <section className="w-full px-1 md:px-6 py-[2rem] md:py-[5rem] bg-white  ">
       <div className="max-w-6xl mx-auto text-center flex flex-col gap-2 md:gap-8 ">
 
         <div className="flex-center hidden">
-          <p className="text-sm font-medium text-blue-500 bg-blue-100 inline-block px-3 py-1 rounded-full mb-4 w-[5rem] ">
+          <p className="text-sm font-medium text-[#267ff5] bg-blue-100 inline-block px-3 py-1 rounded-full mb-4 w-[5rem] ">
             Work
           </p>
         </div>
         <h2 className="text-2xl md:text-3xl font-bold mb-6">
-          Our Work <span className="text-blue-600">Portfolio</span>
+          Our Work <span className="text-[#267ff5]">Portfolio</span>
         </h2>
 
         {/* Filter Tabs */}
@@ -57,7 +57,7 @@ export default function PortfolioGallery() {
               key={cat}
               className={`text-[12px] md:text-sm px-2 md:px-4 py-2 rounded-full ${
                 selectedCategory === cat
-                  ? "bg-blue-600 text-white"
+                  ? "bg-[#267ff5] text-white"
                   : "bg-gray-100 text-gray-700 hover:bg-blue-100"
               }`}
               onClick={() => setSelectedCategory(cat)}
@@ -85,8 +85,8 @@ export default function PortfolioGallery() {
               </div>
 
               <div className="p-4 text-left">
-                <h3 className="font-bold text-md text-blue-600">{item.judul}</h3>
-                <p className="text-sm text-gray-600">{item.kategoriid} – {item.framework}</p>
+                <h3 className="font-bold text-md text-b[#267ff5">{item.judul}</h3>
+                <p className="text-sm text-gray-600">{item.kategoriid}</p>
               </div>
             </div>
           ))}

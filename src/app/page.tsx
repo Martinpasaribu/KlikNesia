@@ -41,7 +41,7 @@ export default function Home() {
               </p>
 
 
-              <h1 className="text-3xl md:text-[3rem] text-slate-800 w-full max-w-[35rem] leading-snug lg:eading-normal">One Solution For Every Your Bisnis.</h1>
+              <h1 className="text-3xl md:text-[3rem] md2:text-[4rem] text-slate-800 w-full max-w-[35rem] leading-snug font-semibold lg:leading-normal">One Solution For Every Your Bisnis.</h1>
               <p className=" text-md md:text-[18px] text-slate-500"> Upgrade to the PRO version of Untitled UI to unlock everything. Here’s a 10% discount to say thanks: </p>
               
               <button onClick={scrollToSection} className="w-full text-[16px] font-semibold max-w-[12em] border-dashed border-[1px] border-blue-400 px-4 py-2 text-blue-600  bg-white rounded-xl">
@@ -53,13 +53,13 @@ export default function Home() {
             <div className="relative w-full flex justify-end p-2 md:p-8">
 
                 <Image
-                    src="/assets/Image/image.png"
+                    src="/assets/Image/image_main.jpg"
                     alt="MyApp Logo"
-                    width={500}
-                    height={400}
+                    width={700}
+                    height={700}
                 />
 
-                <div className="absolute flex flex-col md:gap-4 top-0 left-0 w-full max-w-[10rem] sm:max-w-[13rem]  md:max-w-[15rem] lg:max-w-[21rem] border-[1px] lg:border-[0px] bg-white p-2 md:p-6 rounded-lg shadow-lg">
+                <div className="absolute flex flex-col md:gap-4 -top-4 left-0 w-full max-w-[10rem] sm:max-w-[13rem]  md:max-w-[15rem] lg:max-w-[21rem] border-[1px] lg:border-[0px] bg-white p-2 md:p-6 rounded-lg shadow-lg">
                     
                     <h1 className=" text-[12px] md:text-[15px]"> Total Visit </h1>
                     <h2 className=" text-[14px] md:text-[26px]"> 2,402</h2>
@@ -82,7 +82,7 @@ export default function Home() {
                     E-commerce
                 </h1>
 
-                <h1 className="absolute py-1 px-2 left-[1rem] lg:-left-[2rem] top-[11rem] lg:top-[20rem] bg-[#907CFF] text-white">
+                <h1 className="absolute py-1 px-2 left-[1rem] lg:-left-[2rem] top-[11rem] lg:top-[22rem] bg-[#907CFF] text-white">
                     Education
                 </h1>
 
@@ -244,9 +244,17 @@ export default function Home() {
 
 
           {/* Side 3 */}
+
+          <div ref={targetRef} className="h-screen w-full flex justify-center items-center">
+
+            <PortfolioGallery/>
+
+
+          </div>
+
           <div className="pt-[8rem]">
 
-            <div className="bg-[#267ff5] h-full rounded-t-[8rem] relative w-full ">
+            <div className="backdrop-blur bg-black/5  h-full rounded-[8rem] relative w-full ">
 
                   <div className="h-[15rem] overflow-hidden">
                     <CarouselProduct/>
@@ -259,15 +267,6 @@ export default function Home() {
                   </div>
 
             </div>
-
-          </div>
-
-
-
-          <div ref={targetRef} className="mt-[5rem]">
-
-          <PortfolioGallery/>
-
 
           </div>
 

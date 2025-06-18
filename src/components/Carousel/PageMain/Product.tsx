@@ -113,7 +113,7 @@ export default function CarouselProduct() {
                       className="object-contain transition-transform duration-300 transform hover:scale-110"
                     />
                   </div>
-                  <p className="mt-4 text-sm text-white">{slide.text}</p>
+                  <p className="mt-4 text-sm text-slate-900">{slide.text}</p>
                 </div>
               ))}
             </div>
