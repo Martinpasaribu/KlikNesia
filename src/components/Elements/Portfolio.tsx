@@ -5,7 +5,7 @@ import axios from "axios";
 import { Product } from "@/models/product";
 
 
-const categories = ["All", "Portofolio", "Tools", "UI/UX", "Aplication","e-commerce","Education","Blog","Lain"];
+const categories = ["All", "Portfolio", "Tools", "UI/UX", "Aplication","E-commerce","Education","Blog","Etc"];
 
 export default function PortfolioGallery() {
 
@@ -39,6 +39,7 @@ export default function PortfolioGallery() {
 
   return (
     <section className="w-full px-1 md:px-6 py-[2rem] md:py-[5rem] bg-white  ">
+
       <div className="max-w-6xl mx-auto text-center flex flex-col gap-2 md:gap-8 ">
 
         <div className="flex-center hidden">
@@ -46,12 +47,13 @@ export default function PortfolioGallery() {
             Work
           </p>
         </div>
+
         <h2 className="text-2xl md:text-3xl font-bold mb-6">
           Our Work <span className="text-[#267ff5]">Portfolio</span>
         </h2>
 
         {/* Filter Tabs */}
-        <div className="flex justify-center gap-3 mb-7 md:mb-10 flex-wrap">
+        <div className="flex justify-center gap-3 mb-7 md:mb-10 flex-wrap ">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -68,7 +70,7 @@ export default function PortfolioGallery() {
         </div>
 
         {/* Horizontal Scroll Gallery */}
-        <div className="flex gap-6 overflow-x-auto scrollbar-hide px-2 md:px-5">
+        <div className="flex gap-6 overflow-x-auto scrollbar-hide px-2 md:px-5 p-2">
           {filtered.map((item, index) => (
             <div
               key={index}

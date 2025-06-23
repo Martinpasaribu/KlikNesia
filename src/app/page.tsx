@@ -26,14 +26,15 @@ export default function Home() {
 
           {/* Side 1 */}
 
-          <div className="relative bg- w-full h-screen flex flex-col gap-8 md:gap-4 sm:flex-row justify-start mt-5 items-center rounded-3xl bg-gradient-to-t  dark:from-blue-500 via-blue-500/10 to-transparent ">
+          <div className="relative  w-full flex flex-col gap-8 md:gap-4 sm:flex-row justify-start mt-5 items-center rounded-3xl bg-gradient-to-t  dark:from-blue-500 via-blue-500/10 to-transparent ">
 
             {/* <div className="absolute inset-0 bg-[linear-gradient(to_right,_rgba(255,255,255,0.05)_1px,_transparent_1px),_linear-gradient(to_bottom,_rgba(255,255,255,0.05)_1px,_transparent_1px)] bg-[size:40px_40px] z-0" /> */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,_rgba(0,188,212,0.1)_1px,_transparent_1px),_linear-gradient(to_bottom,_rgba(0,188,212,0.1)_1px,_transparent_1px)] bg-[size:40px_40px] z-0" />
-            <h1 className="hidden text-3xl text-blue-600 dark:text-white">One Solution For Every Your Bisnis.</h1>
+            
+             {/* <h1 className="hidden text-3xl text-blue-600 dark:text-white">One Solution For Every Your Bisnis.</h1> */}
 
 
-            <div className="z-10 w-full flex flex-col gap-4">
+            <div className="z-10 w-full flex flex-col gap-4 ">
 
 
               <p className="text-3xl font-bold bg-gradient-to-r from-[#36d1f4] via-[#1537c0] to-[#027bbc] bg-clip-text text-transparent">
@@ -50,7 +51,7 @@ export default function Home() {
 
             </div>
             
-            <div className="relative w-full flex justify-end p-2 md:p-8">
+            <div className="relative w-full flex justify-end p-2 mt-4 md:p-8">
 
                 <Image
                     src="/assets/Image/image_main.jpg"
@@ -82,7 +83,7 @@ export default function Home() {
                     E-commerce
                 </h1>
 
-                <h1 className="absolute py-1 px-2 left-[1rem] lg:-left-[2rem] top-[11rem] lg:top-[22rem] bg-[#907CFF] text-white">
+                <h1 className="absolute py-1 px-2 left-[1rem] lg:-left-[2rem] top-[8rem] lg:top-[22rem] bg-[#907CFF] text-white">
                     Education
                 </h1>
 
@@ -90,6 +91,7 @@ export default function Home() {
 
 
           </div>
+
 
           <div className="relative min-h-screen bg-gradient-to-b from-white via-[#eef1fc] to-[#dbe4ff] overflow-hidden">
             {/* Background grid lines */}
@@ -282,7 +284,7 @@ export default function Home() {
               </div>
 
 
-              <h1 className="text-3xl md:text-[2rem] lg:text-[2.7rem] text-slate-800 w-full max-w-[35rem]">Our The Best Services</h1>
+              <h1 className="text-3xl md:text-[2rem] lg:text-[2.7rem] text-slate-800 w-full max-w-[35rem]">Our Best Services</h1>
               <p className="text-[14px] text-slate-400"> Capitalize on low hanging to loop identify a ballpark value added activity beta the digital divided with additional click throughs from will close the bottom </p> 
 
               <button className="w-full text-[16px] font-semibold max-w-[8em] border-dashed border-[1px] border-blue-400 px-4 py-2 text-slate-800 rounded-xl bg-[#a4f06b]">

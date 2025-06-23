@@ -22,7 +22,7 @@ export default function Navbar() {
       <nav className="hidden md:block fixed top-0 left-0 w-full z-50 p-4">
         <div className="flex justify-center items-center max-w-8xl mx-auto relative">
 
-          <Link href="/" className="font-bold text-lg absolute top-0 left-0">
+          <Link href="/" className=" hidden font-bold text-lg absolute top-0 left-0">
             <Image
               src="/assets/Icon/Main/CU_Icon.png"
               alt="MyApp Logo"
@@ -32,7 +32,7 @@ export default function Navbar() {
             />
           </Link>
 
-          <div className="flex gap-4 items-center dark:text-white text-slate-500 text-md font-semibold backdrop-blur bg-black/5 dark:bg-[rgb(16_24_32)/0.3] p-3 px-10 rounded-xl">
+          <div className="flex gap-4 items-center dark:text-white text-slate-800 text-[15px] font-normal backdrop-blur bg-[#fffefbcc] dark:bg-[rgb(16_24_32)/0.3] p-2 px-5 rounded-3xl shadow-md">
             <Link href="/">HOME</Link>
             <Link href="/about">ABOUT</Link>
             {/* <Link href="/blog">Blog</Link> */}
@@ -42,10 +42,10 @@ export default function Navbar() {
 
           </div>
 
-          <div className="absolute right-0 top-0">
+          <div className="fixed left-5 bottom-5">
             <div
               onClick={() => dispatch(toggleTheme())}
-              className="w-15 h-8 flex items-center bg-black/10 dark:bg-[rgb(16_24_32)/0.3]  dark:bg-gray-700 rounded-md p-1 cursor-pointer transition-colors"
+              className="w-15 h-8 flex items-center bg-white/10 shadow-lg dark:bg-[rgb(16_24_32)/0.3]  dark:bg-gray-700 rounded-md p-4 cursor-pointer border-[1px] border-slate-200"
             >
               <div className="text-sm px-1">{mode === "dark" ? "🌞" : "🌙"}</div>
               {/* <div

@@ -84,10 +84,10 @@ const AboutPage = () => {
               <figure className='w-full max-w-2xl flex flex-col gap-8'>
                   <h2 className="text-sm md:text-lg font-semibold text-gray-500">OUR VALUES</h2>
                   <h3 className="text-2xl md:text-4xl font-bold leading-tight">
-                  Meet OK Media.<br />
-                  digital.<br />
-                  innovative.<br />
-                  creative.
+                  Meet OK Media<br />
+                  digital<br />
+                  innovative<br />
+                  creative
                   </h3>
                   <p className="text-gray-600">
                   Join a team who works as hard as you do,<br />

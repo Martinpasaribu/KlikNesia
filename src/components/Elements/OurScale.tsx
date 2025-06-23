@@ -21,19 +21,19 @@ const OurScale = () => {
 
                 <figure className="h-full flex flex-col gap-6 p-4 py-10 bg-white rounded-[3rem]">
                     
-                    <div className="w-full h-full max-h-[7rem] relative pt-10">
+                    <div className="w-full h-full max-h-[2rem] relative pt-10">
                         <Image
                             src="/assets/Image/Scale/umkm.png"
                             alt="MyApp Logo"
-                            className='absolute -top-[7rem] -right-[4rem] '
-                            width={1350}
-                            height={1350}
+                            className='absolute -top-[4rem] -right-[2rem] '
+                            width={150}
+                            height={150}
                         />
                     </div>
                     <div className='px-5'>
 
                         <h1 className="text-xl font-bold">UMKM</h1>
-                        <p className="text-[14px]">Usaha Mikro in Indonesia</p>
+                        <p className="text-[14px]">Usaha mikro di Indonesia</p>
                     </div>
 
                 </figure>
@@ -45,15 +45,15 @@ const OurScale = () => {
                     <Image
                         src="/assets/Image/Scale/goverment.png"
                         alt="MyApp Logo"
-                        className='absolute -top-[7rem] -right-[4.5rem] '
-                        width={1450}
-                        height={1450}
+                        className='absolute -top-[5rem] -right-[2.5rem] '
+                        width={190}
+                        height={190}
                     />
                     </div>
 
                     <div className='px-5'>
 
-                        <h1 className="text-xl font-bold">GOVERMENT</h1>
+                        <h1 className="text-xl font-bold">Government</h1>
                         <p className="text-[14px]">Badan Usaha Pemerintahan </p>
 
                     </div>
@@ -63,20 +63,20 @@ const OurScale = () => {
 
                 <figure className="h-full flex flex-col gap-6 p-4 py-10 bg-white rounded-[3rem]">
                     
-                    <div className="w-full h-full max-h-[7rem] relative pt-10">
+                    <div className="w-full h-full max-h-[2rem] relative pt-6">
                     <Image
                         src="/assets/Image/Scale/personal.png"
                         alt="MyApp Logo"
-                        className='absolute -top-[8rem] -right-[4rem] '
-                        width={1350}
-                        height={1350}
+                        className='absolute -top-[5rem] -right-[2rem] '
+                        width={170}
+                        height={170}
                     />
                     </div>
 
                     <div className='px-5'>
 
-                        <h1 className="text-xl font-bold">PERSONAL</h1>
-                        <p className="text-[14px]">Usaha Pribadi Perorangan</p>
+                        <h1 className="text-xl font-bold">Pribadi</h1>
+                        <p className="text-[14px]">Pribadi, Perorangan & Komunitas</p>
 
                     </div>
                     
@@ -89,7 +89,7 @@ const OurScale = () => {
                     <Image
                         src="/assets/Image/Scale/perusahaan.png"
                         alt="MyApp Logo"
-                        className='absolute -top-[7rem] -right-[3rem] '
+                        className='absolute -top-[6rem] -right-[2rem] '
                         width={150}
                         height={150}
                     />
@@ -97,7 +97,7 @@ const OurScale = () => {
 
                     <div className='px-5'>
 
-                        <h1 className="text-xl font-bold">PERUSAHAAN</h1>
+                        <h1 className="text-xl font-bold">Perusahaan</h1>
                         <p className="text-[14px]">Bisnis Perusahan Swasta </p>
 
                     </div>
