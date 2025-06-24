@@ -32,12 +32,21 @@ export default function Navbar() {
             />
           </Link>
 
-          <div className="flex gap-4 items-center dark:text-white text-slate-800 text-[15px] font-normal backdrop-blur bg-[#fffefbcc] dark:bg-[rgb(16_24_32)/0.3] p-2 px-5 rounded-3xl shadow-md">
+          <div className=" flex gap-4 items-center dark:text-white text-slate-800 text-[15px] font-normal backdrop-blur bg-[#fffefbcc] dark:bg-[rgb(16_24_32)/0.3] p-2 px-5 rounded-3xl shadow-md">
             <Link href="/">HOME</Link>
             <Link href="/about">ABOUT</Link>
             {/* <Link href="/blog">Blog</Link> */}
             {/* <Link href="/partner">Partner with us</Link> */}
             <button onClick={() => setIsContactOpen(true)}>CONTACT</button> {/* ✅ */}
+            <Link href="/" className=" inline-block  flex-center group">
+              {/* Ikon lonceng */}
+              <h1 className="">BLOG</h1>
+
+              {/* Badge PROMO */}
+              <span className="hidden group-hover:flex absolute -top-[4px] -right-[3rem]  bg-green-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-md">
+                Coming soon
+              </span>
+            </Link>
 
 
           </div>

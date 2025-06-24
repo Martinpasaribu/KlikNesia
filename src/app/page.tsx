@@ -3,16 +3,18 @@
 import CarouselProduct from "@/components/Carousel/PageMain/Product";
 import OurScale from "@/components/Elements/OurScale";
 import PortfolioGallery from "@/components/Elements/Portfolio";
+import ContactModal from "@/components/Global/contact";
 import Icon from "@/styles/Icon";
 import IconListItem from "@/styles/IconText";
 import Images from "@/styles/Images";
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 export default function Home() {
 
   const targetRef = useRef<HTMLDivElement>(null);
-
+  const [isContactOpen, setIsContactOpen] = useState(false); // ✅ modal state
+  
   const scrollToSection = () => {
     targetRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -23,10 +25,11 @@ export default function Home() {
 
         <div className="w-full ">
 
+          <ContactModal open={isContactOpen} onClose={() => setIsContactOpen(false)} />
 
           {/* Side 1 */}
 
-          <div className="relative  w-full flex flex-col gap-8 md:gap-4 sm:flex-row justify-start mt-5 items-center rounded-3xl bg-gradient-to-t  dark:from-blue-500 via-blue-500/10 to-transparent ">
+          <div className="relative  w-full md1:h-screen flex flex-col gap-8 md:gap-4 sm:flex-row justify-start mt-5 items-center rounded-3xl bg-gradient-to-t  dark:from-blue-500 via-blue-500/10 to-transparent ">
 
             {/* <div className="absolute inset-0 bg-[linear-gradient(to_right,_rgba(255,255,255,0.05)_1px,_transparent_1px),_linear-gradient(to_bottom,_rgba(255,255,255,0.05)_1px,_transparent_1px)] bg-[size:40px_40px] z-0" /> */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,_rgba(0,188,212,0.1)_1px,_transparent_1px),_linear-gradient(to_bottom,_rgba(0,188,212,0.1)_1px,_transparent_1px)] bg-[size:40px_40px] z-0" />
@@ -42,8 +45,8 @@ export default function Home() {
               </p>
 
 
-              <h1 className="text-3xl md:text-[3rem] md2:text-[4rem] text-slate-800 w-full max-w-[35rem] leading-snug font-semibold lg:leading-normal">One Solution For Every Your Bisnis.</h1>
-              <p className=" text-md md:text-[18px] text-slate-500"> Upgrade to the PRO version of Untitled UI to unlock everything. Here’s a 10% discount to say thanks: </p>
+              <h1 className="text-3xl md:text-[3rem] md2:text-[4rem] text-slate-800 w-full max-w-[35rem] leading-snug font-semibold lg:leading-normal">One Solution For Every Your business.</h1>
+              <p className=" text-md md:text-[18px] text-slate-500"> Boost your business to open up opportunities for your business to be recognized and promoted digitally. Here is a 10% discount as a thank you for joining us</p>
               
               <button onClick={scrollToSection} className="w-full text-[16px] font-semibold max-w-[12em] border-dashed border-[1px] border-blue-400 px-4 py-2 text-blue-600  bg-white rounded-xl">
                   <h1 > Our Product  </h1>
@@ -159,7 +162,7 @@ export default function Home() {
           <div className="w-full flex flex-col gap-8 lg:gap-4 p-2 lg:p-4 md:flex-row justify-center items-center rounded-3xl bg-gradient-to-t  dark:from-blue-500 via-blue-500/10 to-transparent mt-[6.5rem]">
 
           
-            <div className="w-full flex flex-col gap-4 p-2">
+            <div className="w-full flex flex-col gap-4 md:gap-8 p-2">
 
               <div className="w-full max-w-[5rem] flex text-md text-[#267ff5] bg-[#267ff5] dark:text-white rounded-lg">
                 <h1 className="m-auto text-white">Process</h1>
@@ -176,8 +179,8 @@ export default function Home() {
                 <IconListItem iconName="checklist" text="Deal" />
               </ul>
 
-              <button className="w-full text-[16px] font-semibold max-w-[12em] border-dashed border-[1px] border-blue-400 px-4 py-2 text-slate-800 rounded-xl bg-[#a4f06b]">
-                  <h1> Get Started Free  </h1>
+              <button onClick={() => setIsContactOpen(true)} className="w-full text-[16px] font-semibold max-w-[12em] border-dashed border-[1px] border-blue-400 px-4 py-2 text-slate-800 rounded-xl bg-[#a4f06b]">
+                  <h1> Get to consult  </h1>
               </button>
 
             </div>

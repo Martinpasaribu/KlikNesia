@@ -101,7 +101,7 @@ export default function CarouselProduct() {
               {slides.map((slide, index) => (
                 <div
                   key={index}
-                  className="bg-transparent w-[10rem] rounded-3xl p-2 sm:p-6 text-center shrink-0"
+                  className="bg-transparent w-[10rem] rounded-3xl p-2 sm:p-6 text-center shrink-0 flex flex-col justify-between"
                   style={{ minWidth: `${100 / visibleCount}%` }}
                 >
                   <div className="flex justify-center">
